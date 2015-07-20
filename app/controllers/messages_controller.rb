@@ -21,7 +21,7 @@ class MessagesController < ApplicationController
     @message.to = @contact.phone
     if @message.save
       flash[:notice] = "your msg was sent"
-      redirect_to contact_messages_path(@contact)
+      redirect_to contact_path(@contact)
     else
       render :new
     end
