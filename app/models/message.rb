@@ -7,14 +7,16 @@
     def send_message
        response = RestClient::Request.new(
         :method => :post,
-        :url => 'https://api.twilio.com/2010-04-01/Accounts/AC31bd5c2cf85efc0161cd818da44de611/Messages.json',
-        :user =>'AC31bd5c2cf85efc0161cd818da44de611',
-        :password => '16ffc078351bee3c5dbd4d513ed0220e',
+        :url => "https://api.twilio.com/2010-04-01/Accounts/#{ENV['TWILIO_ACCOUNT_SID']}/Messages.json",
+        :user => ENV['TWILIO_ACCOUNT_SID'],
+        :password => ENV['TWILIO_AUTH_TOKEN'],
         :payload => {:Body => body,
                      :To => to,
                      :From => from}
        ).execute
 
+  rescue
+    false
 
     end
   end
