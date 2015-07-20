@@ -5,7 +5,7 @@
 <div class="col-lg-12">
 
 
-  <h2 class="contact-msg-name">All messages sent to <%= @contact.name %></h2>
+  <h2 class="contact-msg-name">All messages sent to <%= @contact.name %> at <%= @contact.phone %></h2>
 <hr>
   <% @contact.messages.each do |message| %>
     <h3>From: <%= message.from %></h3>
