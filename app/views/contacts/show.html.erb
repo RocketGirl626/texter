@@ -1,0 +1,19 @@
+<% content_for :title, "Text Your Mom | @contact.name" %>
+
+<div class='row'>
+
+<div class="col-lg-12">
+
+
+  <h2 class="contact-msg-name">All messages sent to <%= @contact.name %></h2>
+<hr>
+  <% @contact.messages.each do |message| %>
+    <h3>From: <%= message.from %></h3>
+    <h3>To: <%= message.to %></h3>
+    <h5>Message: <%= message.body %></h5>
+
+  <% end %>
+
+
+  <button class="links left-link"><%= link_to 'Send a New Message to this contact', new_contact_message_path(@contact), id: "new_contact_message_link" %></button>
+</div><!--end of

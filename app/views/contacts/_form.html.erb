@@ -1,0 +1,9 @@
+<%= render "layouts/errors", :object => @contact %>
+
+<%= form_for @contact  do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+  <%= f.submit %>
+<% end %>
