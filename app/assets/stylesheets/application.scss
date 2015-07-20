@@ -66,10 +66,14 @@ a.navbar-brand {
   text-align:center;
 
 }
-.all-moms {
+.all-moms, .group-moms {
   font-family: 'Fontdiner Swanky', cursive;
   font-size: 28px;
   letter-spacing: 1.15;
   color:  #81b33a;
   text-align:left;
+}
+
+.group-moms {
+  font-size: 24px;
 }
